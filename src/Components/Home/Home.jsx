@@ -32,6 +32,7 @@ export default function Home() {
       {gamesList.map((elem) => (
         <Game
           key={elem.id}
+          gId={elem.id}
           thumb={elem.thumbnail}
           title={elem.title}
           desc={elem.short_description}

@@ -20,7 +20,7 @@ export default function Header() {
               className="logo"
               style={{ maxWidth: "40px" }}
             />{" "}
-            Games Database
+            <span className="align-middle">FreeGames</span>
           </Link>
           <button
             className="navbar-toggler"
