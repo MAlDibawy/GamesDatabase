@@ -8,9 +8,6 @@ import "./Header.css";
 export default function Header() {
   return (
     <div>
-      {/* <header>
-        <img src={headerImg} alt="header" className="w-100" />
-      </header> */}
       <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
           <Link className="navbar-brand fw-bolder" to="/home">

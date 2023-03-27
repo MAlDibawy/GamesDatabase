@@ -2,7 +2,6 @@ import React from "react";
 import GameModal from "./../Modal/GameModal";
 
 export default function Game({ gId, thumb, title, desc }) {
-  // console.log(id);
   return (
     <GameModal gId={gId}>
       <div>
