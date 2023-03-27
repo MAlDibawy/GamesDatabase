@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainPage from "./Components/MainPage/MainPage";
 import Home from "./Components/Home/Home";
 import Category from "./Components/Category/Category";
+import Error404 from "./Components/PageNotFound/Error404";
 
 const Router = createBrowserRouter([
   {
@@ -32,6 +33,7 @@ const Router = createBrowserRouter([
         element: <Category key={"superhero"} category="superhero" />,
       },
       { path: "/pixel", element: <Category key={"pixel"} category="pixel" /> },
+      { path: "*", element: <Error404 /> },
     ],
   },
 ]);

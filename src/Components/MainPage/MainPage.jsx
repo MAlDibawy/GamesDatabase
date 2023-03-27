@@ -28,7 +28,7 @@ export default function MainPage() {
   return (
     <>
       <Header />
-      <div className="text-white container my-5">
+      <div className="text-white container my-5 ">
         <div className="row g-4">
           <Outlet context={{ getGames }} />
         </div>
