@@ -30,7 +30,6 @@ export default function GameModal({ children, gId }) {
     }
   }
   useEffect(() => {
-    // console.log("useEffect");
     if (game === null && show) {
       getDetails(gId).then((res) => {
         setGame(res);
