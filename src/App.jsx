@@ -7,7 +7,7 @@ import Error404 from "./Components/PageNotFound/Error404";
 
 const Router = createBrowserRouter([
   {
-    path: "/",
+    path: "/GamesDatabase",
     element: <MainPage />,
     children: [
       { path: "/", element: <Home /> },
