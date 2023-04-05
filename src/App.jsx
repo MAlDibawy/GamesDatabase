@@ -7,32 +7,32 @@ import Error404 from "./Components/PageNotFound/Error404";
 
 const Router = createBrowserRouter([
   {
-    path: "/GamesDatabase",
+    path: "/",
     element: <MainPage />,
     children: [
-      { path: "/GamesDatabase", element: <Home /> },
-      { path: "home", element: <Home /> },
+      { path: "/", element: <Home /> },
+      { path: "/home", element: <Home /> },
       {
-        path: "mmorpg",
+        path: "/mmorpg",
         element: <Category key={"mmorpg"} category="mmorpg" />,
       },
       {
-        path: "shooter",
+        path: "/shooter",
         element: <Category key={"shooter"} category="shooter" />,
       },
       {
-        path: "sailing",
+        path: "/sailing",
         element: <Category key={"sailing"} category="sailing" />,
       },
       {
-        path: "permadeath",
+        path: "/permadeath",
         element: <Category key={"permadeath"} category="permadeath" />,
       },
       {
-        path: "superhero",
+        path: "/superhero",
         element: <Category key={"superhero"} category="superhero" />,
       },
-      { path: "pixel", element: <Category key={"pixel"} category="pixel" /> },
+      { path: "/pixel", element: <Category key={"pixel"} category="pixel" /> },
       { path: "*", element: <Error404 /> },
     ],
   },
