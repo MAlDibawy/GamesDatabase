@@ -1,0 +1,12 @@
+.loading {
+  height: 70vh;
+  background-color: #272b30e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading .loadIcon {
+  color: grey;
+  font-size: 100px;
+}

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Game from "../Game/Game";
 import { useEffect } from "react";
+import LoadingScreen from "./../LoadingScreen/LoadingScreen";
 export default function Home() {
   let [gamesList, setGamesList] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(false);
   function getGames() {
     const options = {
       method: "GET",
@@ -12,13 +13,16 @@ export default function Home() {
         "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
       },
     };
-
+    setIsLoading(true);
     fetch(
       "https://free-to-play-games-database.p.rapidapi.com/api/games",
       options
     )
       .then((response) => response.json())
-      .then((response) => setGamesList(response))
+      .then((response) => {
+        setGamesList(response);
+        setIsLoading(false);
+      })
       .catch((err) => console.error(err));
   }
   useEffect(() => {
@@ -29,15 +33,19 @@ export default function Home() {
 
   return (
     <>
-      {gamesList.map((elem) => (
-        <Game
-          key={elem.id}
-          gId={elem.id}
-          thumb={elem.thumbnail}
-          title={elem.title}
-          desc={elem.short_description}
-        />
-      ))}
+      {isLoading ? (
+        <LoadingScreen />
+      ) : (
+        gamesList.map((elem) => (
+          <Game
+            key={elem.id}
+            gId={elem.id}
+            thumb={elem.thumbnail}
+            title={elem.title}
+            desc={elem.short_description}
+          />
+        ))
+      )}
     </>
   );
 }
