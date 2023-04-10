@@ -1,5 +1,9 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import MainPage from "./Components/MainPage/MainPage";
 import Home from "./Components/Home/Home";
 import Category from "./Components/Category/Category";
@@ -12,6 +16,7 @@ const Router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/home", element: <Home /> },
+      { path: "/GamesDatabase", element: <Navigate to={"/home"} /> },
       {
         path: "/mmorpg",
         element: <Category key={"mmorpg"} category="mmorpg" />,
