@@ -60,7 +60,7 @@ export default function GameModal({ children, gId }) {
             <img
               src={game?.thumbnail}
               alt="game poster"
-              className="rounded-2"
+              className="rounded-2 w-100"
               onClick={handleShow}
             />
           </div>
